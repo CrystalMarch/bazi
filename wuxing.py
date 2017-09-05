@@ -63,6 +63,7 @@ def calculateTime(tianganOfDay, time):  # tiangan%10 : 10
     tianganIndex = (2 * tianganOfDay - 1) % 10
     if time == 23 or time == 0 or time == 24:
         dizhi = dizhis[0]
+        dizhiIndex = 0
     else:
         dizhiIndex = time / 2
         if dizhiIndex >= 0.5:
@@ -116,7 +117,7 @@ def getWuXing(bazi):
 # birthDay = input("please input your birth day: ")
 # birthTime = input("please input your birth time: ")
 # shenchenbazi = getShenChenBaZi(1995,3,16,14)
-shenchenbazi = getShenChenBaZi(1994,5,8,9)
+# shenchenbazi = getShenChenBaZi(1992,10,6,23)
 # shenchenbazi = getShenChenBaZi(1987,12,24,7)
 # shenchenbazi = getShenChenBaZi(int(birthYear), int(birthMonth), int(birthDay), int(birthTime))
 print("你的生辰八字是: %s" % (shenchenbazi))
