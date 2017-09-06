@@ -116,7 +116,7 @@ def getWuXing(bazi):
 # birthMonth = input("please input your birth month: ")
 # birthDay = input("please input your birth day: ")
 # birthTime = input("please input your birth time: ")
-# shenchenbazi = getShenChenBaZi(1995,3,16,14)
+shenchenbazi = getShenChenBaZi(1994,5,8,9)
 # shenchenbazi = getShenChenBaZi(1992,10,6,23)
 # shenchenbazi = getShenChenBaZi(1987,12,24,7)
 # shenchenbazi = getShenChenBaZi(int(birthYear), int(birthMonth), int(birthDay), int(birthTime))
