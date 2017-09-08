@@ -1,6 +1,7 @@
 import datetime
 import math
 import ganzhi
+import wuxingData
 
 tiangans = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
 dizhis = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
@@ -113,16 +114,14 @@ def getWuXing(bazi):
     return (scoreForJin, scoreForMu, scoreForShui, scoreForHuo, scoreForTu)
 
 
-# birthYear = input("please input your birth year: ")
-# birthMonth = input("please input your birth month: ")
-# birthDay = input("please input your birth day: ")
-# birthTime = input("please input your birth time: ")
-# shenchenbazi = getShenChenBaZi(1994,4,20,6)
-# shenchenbazi = getShenChenBaZi(1992,10,6,23)
-# shenchenbazi = getShenChenBaZi(1987,12,24,7)
-# shenchenbazi = getShenChenBaZi(int(birthYear), int(birthMonth), int(birthDay), int(birthTime))
-# print("你的生辰八字是: %s" % (shenchenbazi))
-# shenchenbazi = "戊辰-壬戌-丁丑-丁未"
-shenchenbazi = "辛亥-庚寅-乙未-己卯"
-wuxing = getWuXing(shenchenbazi)
-print("您的生辰八字五行指数为金：%.2f,木：%.2f,水：%.2f,火：%.2f,土:%.2f" %(wuxing))
+def main():
+    birthYear = input("please input your birth year: ")
+    birthMonth = input("please input your birth month: ")
+    birthDay = input("please input your birth day: ")
+    birthTime = input("please input your birth time: ")
+    # shenchenbazi = getShenChenBaZi(1994,4,20,6)
+    shenchenbazi = getShenChenBaZi(int(birthYear), int(birthMonth), int(birthDay), int(birthTime))
+    print("你的生辰八字是: %s" % (shenchenbazi))
+    wuxing = getWuXing(shenchenbazi)
+    print("您的生辰八字五行指数为金：%.2f,木：%.2f,水：%.2f,火：%.2f,土:%.2f" % (wuxing))
+    
