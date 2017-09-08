@@ -20,5 +20,6 @@ def main():
             if (matchedCharacter):
                 matchedCharacter = matchedCharacter.group()
                 relatedCharactersDic[matchedCharacter] = result
-    print(relatedCharactersDic.keys())
-    print(relatedWordsDic.keys())
+    # print(relatedCharactersDic.keys())
+    # print(relatedWordsDic.keys())
+    return relatedCharactersDic.keys()

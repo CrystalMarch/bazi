@@ -5,6 +5,7 @@ import wuxingData
 
 tiangans = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
 dizhis = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+wuxingNames = ["金", "木", "水", "火", "土"]
 
 # wuxingDicForTiangan = {
 #     "甲":"阳木",
@@ -115,13 +116,27 @@ def getWuXing(bazi):
 
 
 def main():
-    birthYear = input("please input your birth year: ")
-    birthMonth = input("please input your birth month: ")
-    birthDay = input("please input your birth day: ")
-    birthTime = input("please input your birth time: ")
-    # shenchenbazi = getShenChenBaZi(1994,4,20,6)
-    shenchenbazi = getShenChenBaZi(int(birthYear), int(birthMonth), int(birthDay), int(birthTime))
+    # birthYear = input("please input your birth year: ")
+    # birthMonth = input("please input your birth month: ")
+    # birthDay = input("please input your birth day: ")
+    # birthTime = input("please input your birth time: ")
+    shenchenbazi = getShenChenBaZi(1994,5,8,9)
+    # shenchenbazi = getShenChenBaZi(
+    #     int(birthYear), int(birthMonth), int(birthDay), int(birthTime))
     print("你的生辰八字是: %s" % (shenchenbazi))
     wuxing = getWuXing(shenchenbazi)
     print("您的生辰八字五行指数为金：%.2f,木：%.2f,水：%.2f,火：%.2f,土:%.2f" % (wuxing))
-    
+    minScore = 0
+    minIndexes = []
+    for index, value in enumerate(wuxing):
+        if value == minScore:
+            minIndexes.append(index)
+    lackingWuxings = []
+    for minIndex in minIndexes:
+        lackingWuxings.append(wuxingNames[minIndex])
+    wuxingCharacters = []
+    for lackingWuxing in lackingWuxings:
+        lackingWuxingCharacters = wuxingData.Dic.get(lackingWuxing)
+        if lackingWuxingCharacters:
+            wuxingCharacters.extend(wuxingData.Dic.get(lackingWuxing))
+    return wuxingCharacters
