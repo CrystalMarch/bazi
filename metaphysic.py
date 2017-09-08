@@ -120,7 +120,7 @@ def main():
     # birthMonth = input("please input your birth month: ")
     # birthDay = input("please input your birth day: ")
     # birthTime = input("please input your birth time: ")
-    shenchenbazi = getShenChenBaZi(1994,5,8,9)
+    shenchenbazi = getShenChenBaZi(1986,4,12,4)
     # shenchenbazi = getShenChenBaZi(
     #     int(birthYear), int(birthMonth), int(birthDay), int(birthTime))
     print("你的生辰八字是: %s" % (shenchenbazi))
@@ -140,3 +140,5 @@ def main():
         if lackingWuxingCharacters:
             wuxingCharacters.extend(wuxingData.Dic.get(lackingWuxing))
     return wuxingCharacters
+
+# main()
