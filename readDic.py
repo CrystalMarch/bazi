@@ -22,6 +22,8 @@ def main():
                 relatedCharactersDic[matchedCharacter] = result
                 print(matchedCharacter)
                 print(result)
-    # print(relatedWordsDic.keys())
+    print(list(relatedCharactersDic.keys()))
     return relatedCharactersDic.keys()
-# main()
+main()
+
+# r"：\S*?。"懒惰匹配去除所有例句
