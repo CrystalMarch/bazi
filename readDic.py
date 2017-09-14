@@ -22,7 +22,7 @@ def main(searchText):
                 relatedCharactersDic[matchedCharacter] = result
                 print(matchedCharacter)
                 print(relatedCharactersDic[matchedCharacter])
-    print(relatedCharactersDic)
+    print(list(relatedCharactersDic.keys()))
     return relatedCharactersDic
 
 if __name__ == '__main__':
