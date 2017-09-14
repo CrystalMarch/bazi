@@ -15,9 +15,9 @@ def main():
 
     gender = input("Male or female? Input 1 to represent male, input 2 to represent female: ")
     if gender == 1:
-        genderCharacters = set(characters.maleNames)
+        genderCharacters = set(characters.male)
     else:
-        genderCharacters =set(characters.femaleNames)
+        genderCharacters =set(characters.female)
     print("Characters got by gender: ")
     print(genderCharacters)
     finalResult = desiredCharacters & desiredCharacters & genderCharacters

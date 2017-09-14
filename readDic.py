@@ -1,12 +1,12 @@
 import re
 
-def main():
-    searchTxt = input('your search txt: ')
+def main(searchText):
+    # searchTxt = input('your search txt: ')
     charExp = r"(?<=^\*)\w{1}"
     wordExp = r"(?<=^\…)\w+(?=\＠)"
     with open('modern-chinese-dic.txt', 'r', encoding='utf-8') as f:
         modernDic = f.read()
-        testExpression = r'.*' + searchTxt + r'.*\n'
+        testExpression = r'.*' + searchText + r'.*\n'
         results = re.findall(testExpression, modernDic)
         relatedWordsDic = {}
         relatedCharactersDic = {}
@@ -21,11 +21,12 @@ def main():
                 matchedCharacter = matchedCharacter.group()
                 relatedCharactersDic[matchedCharacter] = result
                 print(matchedCharacter)
-                print(result)
-    print(list(relatedCharactersDic.keys()))
-    return relatedCharactersDic.keys()
+                print(relatedCharactersDic[matchedCharacter])
+    print(relatedCharactersDic)
+    return relatedCharactersDic
 
 if __name__ == '__main__':
-    main()
+    searchText = input('your search txt: ')
+    main(searchText)
 
 # r"：\S*?。"懒惰匹配去除所有例句

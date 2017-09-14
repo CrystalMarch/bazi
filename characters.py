@@ -1,7 +1,7 @@
 # coding=utf8
 import random
 
-maleNames = [
+male = [
     '厚', '炜', '纯', '杰', '海', '瑞', '周', '衡', '维', '茂', '镭', '骋', '峥', '明', '翼',
     '秋', '炼', '银', '前', '子', '澄', '盼', '寅', '向', '艺', '渤', '隽', '禹', '强', '舜',
     '科', '迅', '琛', '瑾', '韵', '捷', '富', '烽', '崴', '耿', '硕', '余', '轩', '庚', '昊',
@@ -50,7 +50,7 @@ maleNames = [
     '珉', '奎', '育', '旺', '坦', '纲'
 ]
 
-femaleNames = [
+female = [
     '灵', '照', '语', '汝', '俏', '蕾', '女', '文', '思', '均', '榕', '晶', '仙', '梓', '珠',
     '蔚', '徽', '韫', '娆', '玥', '恩', '贤', '玄', '肖', '雁', '玉', '蒙', '跃', '诺', '珏',
     '曾', '蔓', '雅', '密', '原', '扬', '俪', '诚', '昀', '苑', '亚', '一', '颜', '意', '华',
@@ -105,5 +105,5 @@ femaleNames = [
 #         0, len(femaleNamesTest))]
 
 if __name__ == '__main__':
-    testName = femaleNames[random.randint(0, len(femaleNames))] + femaleNames[random.randint(0, len(femaleNames))]
+    testName = female[random.randint(0, len(female))] + female[random.randint(0, len(female))]
     print("Your name is: %s" % (testName))
