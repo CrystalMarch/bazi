@@ -104,6 +104,6 @@ femaleNames = [
 #     femaleNamesTest))] + femaleNamesTest[random.randint(
 #         0, len(femaleNamesTest))]
 
-testName = femaleNames[random.randint(0, len(femaleNames))] + femaleNames[random.randint(0, len(femaleNames))]
-
-print("Your name is: %s" % (testName))
+if __name__ == '__main__':
+    testName = femaleNames[random.randint(0, len(femaleNames))] + femaleNames[random.randint(0, len(femaleNames))]
+    print("Your name is: %s" % (testName))

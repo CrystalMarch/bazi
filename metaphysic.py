@@ -141,4 +141,5 @@ def main():
             wuxingCharacters.extend(wuxingData.Dic.get(lackingWuxing))
     return wuxingCharacters
 
-# main()
+if __name__ == '__main__':
+    main()

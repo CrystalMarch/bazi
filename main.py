@@ -27,4 +27,6 @@ def main():
     finalName = finalResultList[random.randint(0, len(finalResultList))] + finalResultList[random.randint(0, len(finalResultList))]
     print('Test name: ')
     print(finalName)
-main()
+
+if __name__ == '__main__':
+    main()

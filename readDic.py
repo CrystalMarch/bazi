@@ -24,6 +24,8 @@ def main():
                 print(result)
     print(list(relatedCharactersDic.keys()))
     return relatedCharactersDic.keys()
-main()
+
+if __name__ == '__main__':
+    main()
 
 # r"：\S*?。"懒惰匹配去除所有例句
