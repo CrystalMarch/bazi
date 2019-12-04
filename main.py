@@ -8,8 +8,8 @@ def main():
     wuxingCharacters = set(metaphysic.main())
     print("Characters got by your shenchenbazi: ")
     print(wuxingCharacters)
-
-    desiredCharacters = set(list(readDic.main()))
+    searchText = input('your search txt: ')
+    desiredCharacters = set(list(readDic.main(searchText)))
     print("Characters got by your wish: ")
     print(desiredCharacters)
 
@@ -24,7 +24,8 @@ def main():
     print('Final result: ')
     print(finalResult)
     finalResultList = list(finalResult)
-    finalName = finalResultList[random.randint(0, len(finalResultList))] + finalResultList[random.randint(0, len(finalResultList))]
+    print(finalResultList)
+    finalName = finalResultList[random.randint(0, len(finalResultList)-1)] + finalResultList[random.randint(0, len(finalResultList)-1)]
     print('Test name: ')
     print(finalName)
 

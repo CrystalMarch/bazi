@@ -348,12 +348,12 @@ def helper_verify_day_60(chinese_year,chinese_month,chinese_day):
         return [chinese_day_error,errors]
         
 
-# def main():
-    #a = day(1903,6,28)#闰年
-    # c = day(1991, 12, 15)
-    #b = change(1903,3,4)
-    #d = helper_verify_day_60(1984,10,11)
+def main():
+    a = day(1903,6,28)  # 闰年
+    c = day(1991, 12, 15)
+    b = change(1903,3,4)
+    d = helper_verify_day_60(1984,10,11)
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()

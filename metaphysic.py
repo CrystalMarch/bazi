@@ -120,7 +120,7 @@ def main():
     # birthMonth = input("please input your birth month: ")
     # birthDay = input("please input your birth day: ")
     # birthTime = input("please input your birth time: ")
-    shenchenbazi = getShenChenBaZi(1986,4,12,4)
+    shenchenbazi = getShenChenBaZi(1994, 5, 8, 9)
     # shenchenbazi = getShenChenBaZi(
     #     int(birthYear), int(birthMonth), int(birthDay), int(birthTime))
     print("你的生辰八字是: %s" % (shenchenbazi))
@@ -135,10 +135,11 @@ def main():
     for minIndex in minIndexes:
         lackingWuxings.append(wuxingNames[minIndex])
     wuxingCharacters = []
+    print(lackingWuxings)
     for lackingWuxing in lackingWuxings:
-        lackingWuxingCharacters = wuxingData.Dic.get(lackingWuxing)
+        lackingWuxingCharacters = wuxingData.wuxingDic.get(lackingWuxing)
         if lackingWuxingCharacters:
-            wuxingCharacters.extend(wuxingData.Dic.get(lackingWuxing))
+            wuxingCharacters.extend(wuxingData.wuxingDic.get(lackingWuxing))
     return wuxingCharacters
 
 if __name__ == '__main__':
